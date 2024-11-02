@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Booking Tour</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            width: 100%;
+            padding: 1rem;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+        }
+
+        header input {
+            margin-top: 10px;
+            padding: 8px;
+            width: 80%;
+            max-width: 500px;
+        }
+
+        main {
+            width: 90%;
+            max-width: 1000px;
+            margin-top: 20px;
+        }
+
+        .dashboard {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .stat {
+            text-align: center;
+            background-color: #e7f5e6;
+            padding: 20px;
+            width: 30%;
+            border-radius: 8px;
+        }
+
+        .bookings table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .bookings th, .bookings td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .bookings th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .bookings td {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Quản lý Booking Tour</h1>
+        <input type="text" id="search" placeholder="Tìm kiếm tour...">
+    </header>
+    <main>
+        <section class="dashboard">
+            <div class="stat">
+                <h2>Tổng Booking</h2>
+                <p id="total-bookings">0</p>
+            </div>
+            <div class="stat">
+                <h2>Booking Đã Xác Nhận</h2>
+                <p id="confirmed-bookings">0</p>
+            </div>
+            <div class="stat">
+                <h2>Booking Đang Chờ</h2>
+                <p id="pending-bookings">0</p>
+            </div>
+        </section>
+        
+        <section class="bookings">
+            <h2>Danh Sách Booking</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tên Tour</th>
+                        <th>Ngày Khởi Hành</th>
+                        <th>Số Lượng Người</th>
+                        <th>Giá</th>
+                        <th>Trạng Thái</th>
+                    </tr>
+                </thead>
+                <tbody id="booking-list">
+                    <!-- Danh sách booking sẽ được thêm bằng JavaScript -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    
+    <script>
+        // Dữ liệu mẫu cho booking tour
+        const bookings = [
+            { name: "Tour Đà Lạt", date: "2024-11-20", people: 2, price: 2000000, status: "Đã xác nhận" },
+            { name: "Tour Phú Quốc", date: "2024-12-01", people: 3, price: 3000000, status: "Đang chờ" },
+            { name: "Tour Hạ Long", date: "2025-01-15", people: 5, price: 4000000, status: "Đã xác nhận" },
+        ];
+
+        // Khởi tạo booking vào bảng
+        function loadBookings() {
+            const bookingList = document.getElementById("booking-list");
+            bookingList.innerHTML = ""; // Xóa sạch trước khi thêm lại
+            let totalConfirmed = 0;
+            let totalPending = 0;
+
+            bookings.forEach(booking => {
+                const row = document.createElement("tr");
+                
+                row.innerHTML = `
+                    <td>${booking.name}</td>
+                    <td>${booking.date}</td>
+                    <td>${booking.people}</td>
+                    <td>${booking.price.toLocaleString()} VND</td>
+                    <td>${booking.status}</td>
+                `;
+                
+                bookingList.appendChild(row);
+
+                // Cập nhật số lượng booking theo trạng thái
+                if (booking.status === "Đã xác nhận") totalConfirmed++;
+                if (booking.status === "Đang chờ") totalPending++;
+            });
+
+            // Hiển thị thống kê tổng quan
+            document.getElementById("total-bookings").textContent = bookings.length;
+            document.getElementById("confirmed-bookings").textContent = totalConfirmed;
+            document.getElementById("pending-bookings").textContent = totalPending;
+        }
+
+        // Hàm tìm kiếm
+        document.getElementById("search").addEventListener("input", function() {
+            const searchValue = this.value.toLowerCase();
+            const filteredBookings = bookings.filter(booking => 
+                booking.name.toLowerCase().includes(searchValue)
+            );
+            updateBookingList(filteredBookings);
+        });
+
+        // Cập nhật danh sách booking
+        function updateBookingList(filteredBookings) {
+            const bookingList = document.getElementById("booking-list");
+            bookingList.innerHTML = ""; // Xóa bảng hiện tại
+
+            filteredBookings.forEach(booking => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${booking.name}</td>
+                    <td>${booking.date}</td>
+                    <td>${booking.people}</td>
+                    <td>${booking.price.toLocaleString()} VND</td>
+                    <td>${booking.status}</td>
+                `;
+                bookingList.appendChild(row);
+            });
+        }
+
+        // Khởi tạo giao diện
+        loadBookings();
+    </script>
+</body>
+</html>
+
