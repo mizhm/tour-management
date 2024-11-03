@@ -1,0 +1,322 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.search {
+    background-image: url('./image/California-400x400.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.search-container {
+    padding: 60px 15px;
+}
+.search-container__heading {
+    display: block;
+    text-align: center;
+    line-height: 26px;
+    font-size: 48px;
+    color: #fff;
+}
+.search-container__text {
+    display: block;
+    color: #fff;
+    text-align: center;
+    font-family: dm sans, Sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 14px 0 32px;
+}
+.search-content {
+    display: flex;
+    max-width: 930px;
+    background-color: #fff;
+    border-radius: 20px;
+    justify-content: space-between;
+    padding: 16px 8px;
+    margin: auto;
+}
+.search-content__location,
+.search-content__date,
+.search-content__check-out
+{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.search-content-icon {
+    font-size: 22px;
+    color: #5E6D77;
+    padding: 0 16px;
+    font-weight: 600;
+}
+.search-content__location-title {
+    display: block;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 38px;
+}
+.search-content-detail > input {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    border: none;
+    outline: none;
+}
+.sub-nav-location {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #dedede;
+    box-sizing: border-box;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .08), 0 4px 12px rgba(0, 0, 0, .05);
+    border-radius: 20px;
+    min-height: unset !important;
+    max-height: unset !important;
+    padding: 30px 15px 30px 10px;
+    margin-top: 16px !important;
+    min-width: 360px;
+    top: 70px;
+    z-index: 2;
+    display: none;
+}
+/* .search-content__location-input:focus + .sub-nav-location {
+    display: block;
+} */
+.sub-nav-location > ul {
+    min-height: 100px;
+    max-height: 332px;
+    padding-left: 0;
+    margin-bottom: 0;
+    padding-right: 0;
+    /* overflow-y: scroll; */
+    overflow-x: hidden;
+    list-style: none;
+}
+.sub-nav-location > ul > li {
+    display: flex;
+    align-items: center;
+    padding: 7px 20px;
+    justify-content: flex-start;
+}
+.sub-nav-location > ul > li > span {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 38px;
+    color:  #5E6D77;
+}
+
+.search-content__date {
+    cursor: pointer;
+}
+.search-content__date-title {
+    display: block;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 38px;
+}
+.search-content__date-time {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #5E6D77;
+}
+.search-content__check-out {
+    cursor: pointer;
+}
+.search-content__check-out-title {
+    display: block;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 38px;
+}
+.search-content__check-out-time {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #5E6D77;
+}
+.search-content-button {
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: #3B71FE;
+    padding: 15px 35px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+.top-tour {
+    padding: 50px 15px;
+    width: 100%;
+}
+.top-tour-heading {
+    font-size: 40px;
+    line-height: 60px;
+    text-align: center;
+}
+.top-tour-container {
+    position: relative; 
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden;
+}
+
+.top-tour-container-list {
+    width: 100%; 
+    display: flex;
+    transition: 0.5s;
+}
+
+.top-tour-content-item {
+    width: 70%;
+    padding: 16px;
+    flex-shrink: 0;
+}
+.top-tour-container-link {
+    text-decoration: none;
+}
+.top-tour-container-item-img {
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+.top-tour-container-item-img > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.top-tour-container-item-img > img:hover {
+    scale: 1.2;
+}
+.top-tour-container-item-content {
+    text-align: center;
+}
+.top-tour-name {
+    display: block;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 26px;
+    margin-bottom: 4px;
+    color: #333;
+}
+.top-tour-number {
+    display: block;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: #5E6D77;
+}
+
+/* tour-list */
+.tour-list-container {
+    background-color: #f7f8fa;
+    padding: 50px 16px;
+}
+.tour-list-heading {
+    font-size: 40px;
+    line-height: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: block;
+}
+.tour-list-content {
+
+}
+.row {
+    display: flex;
+    margin: 24px 0;
+}
+.col-3 {
+    width: 25%;
+    margin: 0 16px;
+}
+.tour-item {
+    box-shadow: 0 0 20px #ccc;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.tour-item-img {
+    width: 100%;
+    overflow: hidden;
+}
+.tour-item-img > img {
+    width: 100%;
+}
+.tour-item-img > img:hover {
+    scale: 1.2;
+}
+.tour-item-content {
+    padding: 16px;
+}
+.tour-item-location {
+    display: block;
+    margin-top: 8px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+    color: #5E6D77;
+}
+.tour-item-location-icon {
+
+}
+.tour-item-title {
+    display: block;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 30px;
+    margin: 16px 0;
+    color: #1A2B48;
+}
+.tour-item-reviews {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.tour-item-reviews-icon {
+    font-size: 18px;
+    color: #ecdd0b;
+}
+.tour-item-rating {
+    background-color: transparent;
+    font-family: dm sans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    padding: 0;
+    margin-right: 4px;
+}
+.tour-item-summary {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #5E6D77;
+}
+.tour-item-footer {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+}
+.tour-item-price {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    /* margin-left: 8px; */
+}
+.tour-item-unit {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+    color:  #5E6D77;
+    white-space: nowrap;
+    float: right;
+}
