@@ -5,10 +5,82 @@
 <head>
     <title>hello - world</title>
 <!--    <link rel="stylesheet" th:href="{}">-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./trangchu.css">
 </head>
 <body>
 <div layout:fragment="content">
     <h1>search page</h1>
+    <div class="search">
+        <div class="search-container">
+            <p class="search-container__heading">Your world of join</p>
+            <p class="search-container__text">Find what makes you happy anytime, anywhere</p>
+            <div class="search-content">
+                <div class="search-content__location">
+                    <i class="fa-solid fa-location-dot search-content-icon"></i>
+                    <div class="search-content-detail">
+                        <span class="search-content__location-title">Location</span>
+                        <input type="text" class="search-content__location-input" placeholder="Where are you going">
+                    </div>
+                    <div class="sub-nav-location">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-location-dot search-content-icon"></i>
+                                <span>California</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-location-dot search-content-icon"></i>
+                                <span>Los Angeles</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-location-dot search-content-icon"></i>
+                                <span>Nevada</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-location-dot search-content-icon"></i>
+                                <span>New Jersey</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-location-dot search-content-icon"></i>
+                                <span>New York City</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-location-dot search-content-icon"></i>
+                                <span>San Francisco</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-location-dot search-content-icon"></i>
+                                <span>Virginia</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="search-content__date">
+                    <i class="fa-regular fa-calendar-days search-content-icon"></i>
+                    <div class="search-content-detail">
+                        <span class="search-content__date-title">Date</span>
+                        <input type="text" class="search-content__date-time" placeholder="Add Date" id="dateTime">
+                    </div>
+                </div>
+                <div class="search-content__check-out">
+                    <i class="fa-regular fa-calendar-days search-content-icon"></i>
+                    <div class="search-content-detail">
+                        <span class="search-content__check-out-title">Check out</span>
+                        <input type="text" class="search-content__check-out-time" placeholder="Add Date" id="dateTime">
+                    </div>
+                </div>
+                <button class="search-content-button">Search</button>
+            </div>
+        </div>
+    </div>
 </div>
+<script src="./search.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+    flatpickr("#dateTime", {
+        dateFormat: "d-m-Y",
+    });
+</script>
 </body>
 </html>
