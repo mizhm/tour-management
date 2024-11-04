@@ -5,10 +5,21 @@
 <head>
     <title>hello - world</title>
 <!--    <link rel="stylesheet" th:href="{}">-->
+    <link rel="stylesheet" href="./404.css">
 </head>
 <body>
 <div layout:fragment="content">
     <h1> 404 Page Not Found</h1>
+    <div class="error">
+        <div class="error-content">
+            <img src="./image/404.img" alt="">
+            <h1>Oops! Look like you're lost</h1>
+            <h3>Either something went wrong or the page doesn't exist anymore.</h3>
+            <p>
+                <a href="">Go to home</a>
+            </p>
+        </div>
+    </div>
 </div>
 </body>
 </html>
