@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.error {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+.error-content > img {
+
+}
+.error-content > h1 {
+    display: block;
+    margin: 20px 0 0
+}
+.error-content > h3 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: #5E6D77;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.error-content > p >a {
+    background: #3b71fe;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 15px 22px;
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+}
