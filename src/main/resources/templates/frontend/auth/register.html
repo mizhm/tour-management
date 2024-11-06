@@ -5,10 +5,172 @@
 <head>
     <title>hello - world</title>
     <!--    <link rel="stylesheet" th:href="{}">-->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: arial;
+            display: block;
+        }
+
+        .container {
+            border: 1px solid black;
+            line-height: 60px;
+            width: 410px;
+            margin: 0 auto;
+            border-radius: 20px;
+            padding: 2rem 1.5rem;
+            background: #ffffff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        ::placeholder {
+            padding-left: 15px;
+        }
+
+        input {
+            width: 400px;
+            height: 35px;
+            border-radius: 7px;
+        }
+
+        .signup_button {
+            width: 400px;
+            background-color: #3c71ff;
+            border-radius: 20px;
+            height: 35px;
+            color: #ffffff;
+            border: none;
+        }
+
+        .forgot_pass_link {
+            color: black;
+        }
+
+        #sign {
+            text-decoration: none;
+            margin-left: 130px;
+            color: black;
+        }
+
+        #sign:hover {
+            color: #3c71ff;
+            text-decoration: underline;
+        }
+
+        #sup:hover {
+            color: #3c71ff;
+            text-decoration: underline;
+        }
+
+        #sup {
+            text-decoration: none;
+            margin-left: 50px;
+            color: black;
+        }
+
+        #myCheckbox {
+            margin-left: 0px;
+            width: 50px;
+            height: 15px;
+        }
+
+        #partner,
+        #normal {
+            margin-top: 0px;
+            margin-left: 0px;
+            width: 50px;
+            height: 15px;
+        }
+
+        .forgot_pass_link {
+            margin-left: 100px;
+        }
+    </style>
 </head>
 <body>
-<div layout:fragment="content">
-    <h1>Register page</h1>
+<div class="container">
+    <div class="signup">
+        <a href="login.html" id="sign">Sign in</a>
+        <a href="register.html" id="sup">Sign up</a>
+        <hr>
+        <h2>Create an account</h2>
+    </div>
+    <form id="signup_form" class="signup_form">
+        <div class="input_wrapper">
+            <input type="text" id="username" placeholder=" Username *" class="input-field">
+            <input type="text" id="fullname" placeholder=" Full Name" class="input-field">
+            <input type="email" id="email" placeholder="Email *" class="input-field">
+            <input type="password" id="password" placeholder="Password" class="input-field">
+        </div>
+
+        <br>
+        <div class="radio-container">
+            <input type="radio" id="normal" name="user" value="normal">
+            <label for="normal">Normal User</label>
+            <input type="radio" id="partner" name="user" value="partner">
+            <label for="partner">Partner User</label>
+        </div>
+
+        <button type="submit" class="signup_button">Register</button>
+        <input type="checkbox" id="myCheckbox">
+        <label for="myCheckbox"><small> I confirm that I have read and accepted the privacy policy</small></label>
+    </form>
 </div>
+
+<script>
+    // Hàm kiểm tra khi form được submit
+    document.getElementById('signup_form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Ngăn chặn form gửi khi chưa kiểm tra
+
+        // Lấy giá trị từ các trường
+        var username = document.getElementById('username').value;
+        var fullname = document.getElementById('fullname').value;
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        var isChecked = document.getElementById('myCheckbox').checked;
+        var userType = document.querySelector('input[name="user"]:checked');
+
+        // Kiểm tra trường bắt buộc
+        if (username === "" || email === "" || password === "") {
+            alert("Username, email, and password are required!");
+            return;
+        }
+
+        // Kiểm tra định dạng email
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+
+        // Kiểm tra mật khẩu tối thiểu 6 ký tự
+        if (password.length < 6) {
+            alert("Password must be at least 6 characters.");
+            return;
+        }
+
+        // Kiểm tra xem người dùng đã chọn loại tài khoản chưa
+        if (!userType) {
+            alert("Please select a user type.");
+            return;
+        }
+
+        // Kiểm tra xem người dùng có đồng ý với chính sách bảo mật không
+        if (!isChecked) {
+            alert("You must agree to the privacy policy.");
+            return;
+        }
+
+        // Nếu tất cả kiểm tra hợp lệ, gửi dữ liệu
+        alert("Registration successful!");
+        // Dưới đây có thể thay thế bằng gửi dữ liệu tới server qua AJAX hoặc submit form
+        // this.submit(); // Uncomment nếu muốn gửi form
+    });
+</script>
 </body>
 </html>
