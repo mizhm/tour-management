@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: arial;
+    display: block;
+
+}
+.container{
+    border: 1px solid black;
+    line-height: 60px;
+    width: 410px;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    background: #ffffff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+::placeholder{
+    padding-left: 1px;
+}
+input{
+    width: 400px;
+    height: 35px;
+    border-radius: 7px;
+   padding-left: 10px;
+}
+#signin_button{
+    width: 400px;
+    background-color:#3c71ff;
+    border-radius:20px ;
+    height: 35px;
+    color: #ffffff;
+}
+.forgot_pass_link{
+    color: black;
+}
+#sign{
+text-decoration: none;
+margin-left: 130px;
+color: black;
+}
+#sign:hover{
+color: #3c71ff;
+text-decoration: underline;
+}
+#sup:hover{
+color: #3c71ff;
+text-decoration: underline;
+}
+#sup{
+text-decoration: none;
+margin-left: 50px;
+color: black;
+}
+#myCheckbox{
+margin-left: 0px;
+width: 50px;
+height: 15px;
+}
+.forgot_pass_link{
+margin-left: 100px;
+}
+ .signin{
+    position: relative;
+ }
+.input_wapper {
+    position: relative;
+
+}
+i{
+    position: absolute;
+    right: 10px;
+    margin-top: -30px;
+    transform: translateY(-50%);
+
+}
