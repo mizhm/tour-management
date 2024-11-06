@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ /* Search */
+.search {
+    background-image: url(https://modtour.travelerwp.com/wp-content/uploads/2022/04/Banner.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+}
+
+.search-container {
+    padding: 60px 15px;
+}
+.search-container__heading {
+    display: block;
+    text-align: center;
+    line-height: 26px;
+    font-size: 48px;
+    color: #fff;
+}
+.search-container__text {
+    display: block;
+    color: #fff;
+    text-align: center;
+    font-family: dm sans, Sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 14px 0 32px;
+}
+.search-content {
+    display: flex;
+    max-width: 930px;
+    background-color: #fff;
+    border-radius: 20px;
+    justify-content: space-between;
+    padding: 16px 8px;
+    margin: auto;
+}
+.search-content__location,
+.search-content__date,
+.search-content__check-out
+{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.search-content-icon {
+    font-size: 22px;
+    color: #5E6D77;
+    padding: 0 16px;
+    font-weight: 600;
+}
+.search-content__location-title {
+    display: block;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 38px;
+}
+.search-content-detail > input {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    border: none;
+    outline: none;
+}
+.sub-nav-location {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #dedede;
+    box-sizing: border-box;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .08), 0 4px 12px rgba(0, 0, 0, .05);
+    border-radius: 20px;
+    min-height: unset !important;
+    max-height: unset !important;
+    padding: 30px 15px 30px 10px;
+    margin-top: 16px !important;
+    min-width: 360px;
+    top: 70px;
+    z-index: 2;
+    display: none;
+}
+/* .search-content__location-input:focus + .sub-nav-location {
+    display: block;
+} */
+.sub-nav-location > ul {
+    min-height: 100px;
+    max-height: 332px;
+    padding-left: 0;
+    margin-bottom: 0;
+    padding-right: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    list-style: none;
+}
+.sub-nav-location > ul > li {
+    display: flex;
+    align-items: center;
+    padding: 7px 20px;
+    justify-content: flex-start;
+}
+.sub-nav-location > ul > li > span {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 38px;
+    color:  #5E6D77;
+}
+
+.search-content__date {
+    cursor: pointer;
+}
+.search-content__date-title {
+    display: block;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 38px;
+}
+.search-content__date-time {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #5E6D77;
+}
+.search-content__check-out {
+    cursor: pointer;
+}
+.search-content__check-out-title {
+    display: block;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 38px;
+}
+.search-content__check-out-time {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #5E6D77;
+}
+.search-content-button {
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: #3B71FE;
+    padding: 15px 35px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
