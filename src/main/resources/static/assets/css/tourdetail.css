@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 5px;
+}
+
+body{
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    min-height: 100vh;
+}
+
+.header2 ul{
+    list-style-type: none;
+    text-align: left;
+}
+.header2 li{
+    color: black;
+    display: inline-block;
+    width: 20% 20% 50%;
+    height: 60px;
+    line-height: 40px;
+    margin-left: 20px;
+}
+
+.header2 li.active{
+    color: grey;
+}
+.header2 a{
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+.header2 a:hover{
+    color: #333;
+}
+
+.tour-detail .left{
+    float: left;
+}
+.tour-detail{
+    width: 100%;
+    height: 80px;
+    line-height: 40px;
+    display: block;
+}
+.tour-detail .right li{
+    width: 200px;
+    height: 40px;
+    margin-left: 100px;
+    display: inline-block;
+}
+.tour-detail .right .share-wrapper{
+    display: none;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 50px auto;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.icon {
+    font-size: 24px;
+    color: #555;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.text h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.text p {
+    font-size: 14px;
+    color: #777;
+}
+.intro {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2, .highlights-section h3, .included-excluded-section h3 {
+    padding: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.about-section p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.highlight-list, .included-list, .excluded-list {
+    list-style-type: none;
+    line-height: 1.6;
+    padding: 0;
+    margin: 10px 0;
+    color: #777;
+}
+
+.highlight-list li, .included-list li, .excluded-list li {
+    margin-bottom: 8px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+.included-excluded-section{
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.included-excluded {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.included-list, .excluded-list {
+    width: 48%;
+}
+
+.itineragi {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.itinerary-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    position: relative;
+}
+
+.time-box {
+    font-weight: bold;
+    color: #555;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 15px;
+}
+
+.content h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.content img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.toggle-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+.toggle-btn:focus {
+    outline: none;
+}
+
+.hidden {
+    display: none;
+}

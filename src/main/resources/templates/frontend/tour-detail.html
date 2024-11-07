@@ -5,10 +5,191 @@
 <head>
     <title>hello - world</title>
     <!--    <link rel="stylesheet" th:href="{}">-->
+    <link rel="stylesheet" href="tourdetail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
 </head>
 <body>
-<div layout:fragment="content">
-    <h1>Tour detail page</h1>
+<div layout:fragment="content" class="product">
+    <hr>
+    <br>
+    <div class="header2">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">United States</a></li>
+            <li class="active">American Parks Trail end Rapid City Express</li>
+        </ul>
+    </div>
+    <hr>
+    <div class="tour-detail">
+        <div class="left">
+            <h1>American Parks Trail end Rapid City Express</h1>
+            <div class="reviews">
+                <i class="fa-solid fa-star"></i>
+                <span class="rate">5</span>
+                <span class="summary">(3 Reviews)</span>
+            </div>
+            <div class="address">Nevada, American</div>
+            <br>
+        </div>
+        <div class="right">
+            <div class="st-video">
+                <a href="https://youtu.be/AmZ0WrEaf34?si=1SovrlddnwbCWQ8C">
+                    <i class="fa-solid fa-play"></i>
+                </a>
+            </div>
+            <div class="share">
+                <a href="#" class="share-item">
+                    <i class="fa-regular fa-share"></i>
+                </a>
+                <ul class="share-wrapper">
+                    <li><a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://modtour.travelerwp.com/st_tour/american-parks-trail-end-rapid-city-express/&amp;title=American Parks Trail end Rapid City Express" target="_blank" rel="noopener" original-title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a class="twitter" href="https://twitter.com/share?url=https://modtour.travelerwp.com/st_tour/american-parks-trail-end-rapid-city-express/&amp;title=American Parks Trail end Rapid City Express" target="_blank" rel="noopener" original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li><a class="no-open pinterest" href="https://pinterest.com/pin/create/bookmarklet/?url=https://modtour.travelerwp.com/st_tour/american-parks-trail-end-rapid-city-express/&amp;is_video=false&amp;description=American Parks Trail end Rapid City Express&amp;media=https://modtour.travelerwp.com/wp-content/uploads/2022/04/90375_5bd5787b.jpg" target="_blank" rel="noopener" original-title="Pinterest"><i class="fab fa-pinterest-p"></i></a></li>
+                    <li><a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://modtour.travelerwp.com/st_tour/american-parks-trail-end-rapid-city-express/&amp;title=American Parks Trail end Rapid City Express" target="_blank" rel="noopener" original-title="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+            <div class="like">
+                <i class="fa-regular fa-heart"></i>
+            </div>
+        </div>
+    </div>
+    <div class="picture">
+        <table>
+            <tr>
+                <td rowspan="2"><img src="https://modtour.travelerwp.com/wp-content/uploads/2022/04/90375_fbcc3a58.jpg" height="640px" width="480px"></td>
+                <td><img src="https://modtour.travelerwp.com/wp-content/uploads/2022/04/90375_9eebac27.jpg" height="320px" width="350px"></td>
+                <td><img src="https://modtour.travelerwp.com/wp-content/uploads/2022/04/90375_8fa8563b.jpg" height="320px" width="350px"></td>
+            </tr>
+            <tr>
+                <td><img src="https://modtour.travelerwp.com/wp-content/uploads/2022/04/90375_8b333ab1.jpg" height="320px" width="350px"></td>
+                <td><img src="https://modtour.travelerwp.com/wp-content/uploads/2022/04/90375_5bd5787b.jpg" height="320px" width="350px"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="tour-info" jstcache="0">
+        <div class="left-info">
+            <div class="feature">
+                <div class="info-container">
+                    <div class="info-box">
+                        <div class="icon"><i class="fa-solid fa-clock"></i></div>
+                        <div class="text">
+                            <h3>Duration</h3>
+                            <p>8 hours</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <div class="icon"><i class="fa-solid fa-shoe-prints"></i></div>
+                        <div class="text">
+                            <h3>Tour Type</h3>
+                            <p>Daily Tour</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <div class="icon"><i class="fa-solid fa-users"></i></div>
+                        <div class="text">
+                            <h3>Group Size</h3>
+                            <p>6 people</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <div class="icon"><i class="fa-regular fa-language"></i></div>
+                        <div class="text">
+                            <h3>Languages</h3>
+                            <p>Espanol, Francais</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="intro">
+                <section class="about-section">
+                    <h2>About this tour</h2>
+                    <p>
+                        Start in Salt Lake City and end in Denver! With the in-depth cultural tour American
+                        Parks Trail end Rapid City (Summer 2019), you have a 9 day tour package taking you
+                        through Salt Lake City, USA and 12 other destinations in USA. American Parks Trail
+                        end Rapid City (Summer 2019) includes accommodation in a hotel as well as an expert
+                        guide, meals, transport and more.
+                    </p>
+                </section>
+                <section class="highlights-section">
+                    <h3>Highlights</h3>
+                    <ul class="highlight-list">
+                        <li><i class="fa-solid fa-circle-check" style="color: #63E6BE;"></i>Visit eight villages showcasing Polynesian culture</li>
+                        <li><i class="fa-solid fa-circle-check" style="color: #63E6BE;"></i>Canoe ride, tattoos, spear throwing, ukulele lessons and fishing</li>
+                        <li><i class="fa-solid fa-circle-check" style="color: #63E6BE;"></i>Spectacular Polynesian evening dinner show ‘Ha: Breath of Life’</li>
+                        <li><i class="fa-solid fa-circle-check" style="color: #63E6BE;"></i>Optional transportation from Waikiki hotels</li>
+                    </ul>
+                </section>
+                <section class="included-excluded-section">
+                    <h3>Included/Excluded</h3>
+                    <div class="included-excluded">
+                        <ul class="included-list">
+                            <li><i class="fa-solid fa-circle-check" style="color: #63E6BE;"></i> Specialized bilingual guide</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #63E6BE;"></i> Private Transport</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #63E6BE;"></i> Entrance fees (Cable and car and Moon Valley)</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #63E6BE;"></i> Box lunch water, banana apple and chocolate</li>
+                        </ul>
+                        <ul class="excluded-list">
+                            <li><i class="fa-regular fa-circle-xmark" style="color: #e04040;"></i> Additional Services</li>
+                            <li><i class="fa-regular fa-circle-xmark" style="color: #e04040;"></i> Insurance</li>
+                            <li><i class="fa-regular fa-circle-xmark" style="color: #e04040;"></i> Drink</li>
+                            <li><i class="fa-regular fa-circle-xmark" style="color: #e04040;"></i> Tickets</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <div class="itineragi">
+                <h2>Itinerary</h2>
+                <div class="itinerary-item">
+                    <div class="time-box">8:00</div>
+                    <div class="content">
+                        <h3>See the impressive LA grid from atop Mount Hollywood</h3>
+                        <img src="https://modtour.travelerwp.com/wp-content/uploads/2022/04/90375_9eebac27.jpg" alt="Image of Mount Hollywood">
+                        <p>
+                            In 1972, the Urraco, which had experienced several initial slowdowns, was finally put into production.
+                            Almost inevitably, the S version also arrived in October of that year. In this case, the goal was not to
+                            enhance the car's performance but to improve its overall quality, which had been neglected in the haste
+                            to start production.
+                        </p>
+                    </div>
+                    <button class="toggle-btn" onclick="toggleContent(this)">-</button>
+                </div>
+
+                <div class="itinerary-item">
+                    <div class="time-box">10:00</div>
+                    <div class="content">
+                        <h3>Exercise and burn calories while you sightsee</h3>
+                        <img src="https://modtour.travelerwp.com/wp-content/uploads/2022/04/90375_8fa8563b.jpg" alt="Image of bridge">
+                        <p>
+                            In 1972, the Urraco, which had experienced several initial slowdowns, was finally put into production.
+                            Almost inevitably, the S version also arrived in October of that year. In this case, the goal was not to
+                            enhance the car's performance but to improve its overall quality, which had been neglected in the haste
+                            to start production.
+                        </p>
+                    </div>
+                    <button class="toggle-btn" onclick="toggleContent(this)">-</button>
+                </div>
+
+                <div class="itinerary-item">
+                    <div class="time-box">12:00</div>
+                    <div class="content">
+                        <h3>Leisurely hike in Griffith Park with panoramic city views</h3>
+                        <p>
+                            In 1972, the Urraco, which had experienced several initial slowdowns, was finally put into production.
+                            Almost inevitably, the S version also arrived in October of that year. In this case, the goal was not to
+                            enhance the car's performance but to improve its overall quality, which had been neglected in the haste
+                            to start production.
+                        </p>
+                    </div>
+                    <button class="toggle-btn" onclick="toggleContent(this)">-</button>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="right-info">
+
+        </div> -->
+    </div>
 </div>
+<script src="tour-detail.js"></script>
 </body>
 </html>
