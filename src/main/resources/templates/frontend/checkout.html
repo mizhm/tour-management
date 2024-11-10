@@ -3,12 +3,170 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layouts/frontend/layout}">
 <head>
-    <title>hello - world</title>
+    <title>Check out</title>
     <!--    <link rel="stylesheet" th:href="{}">-->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px; /* Thêm khoảng cách giữa hai phần */
+        }
+        .form-section, .summary-section, .payment-method {
+            width: 48%;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+        }
+        input[type="text"], input[type="email"], input[type="tel"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+        .payment-method, .terms {
+            margin-top: 20px;
+        }
+        button, .apply-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .apply-btn {
+            width: auto;
+            margin-left: 10px;
+        }
+        .total {
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .terms {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            const firstName = document.getElementById("firstName").value;
+            const lastName = document.getElementById("lastName").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const termsAccepted = document.getElementById("terms").checked;
+
+            if (!firstName || !lastName || !email || !phone) {
+                alert("Please fill in all required fields.");
+                return false;
+            }
+            if (!termsAccepted) {
+                alert("Please accept the terms and conditions.");
+                return false;
+            }
+            alert("Form submitted successfully!");
+            return true;
+        }
+
+        function applyCoupon() {
+            const coupon = document.getElementById("couponCode").value;
+            if (coupon === "DISCOUNT10") {
+                document.getElementById("payAmount").textContent = "$90.00";
+            } else {
+                alert("Invalid coupon code.");
+            }
+        }
+    </script>
 </head>
 <body>
-<div layout:fragment="content">
-    <h1>Checkout page</h1>
+
+<h1>Booking Submission</h1>
+<div class="container">
+    <div class="form-section">
+        <label>First Name *</label>
+        <input type="text" id="firstName" placeholder="First Name">
+
+        <label>Last Name *</label>
+        <input type="text" id="lastName" placeholder="Last Name">
+
+        <label>Email *</label>
+        <input type="email" id="email" placeholder="email@domain.com">
+
+        <label>Phone *</label>
+        <input type="tel" id="phone" placeholder="Your Phone">
+
+        <label>Address Line 1</label>
+        <input type="text" placeholder="Your Address Line 1">
+
+        <label>Address Line 2</label>
+        <input type="text" placeholder="Your Address Line 2">
+
+        <label>City</label>
+        <input type="text" placeholder="Your City">
+
+        <label>State/Province/Region</label>
+        <input type="text" placeholder="State/Province/Region">
+
+        <label>ZIP code/Postal code</label>
+        <input type="text" placeholder="ZIP code/Postal code">
+
+        <label>Country</label>
+        <input type="text" placeholder="Country">
+
+        <label>Special Requirements</label>
+        <input type="text" placeholder="Special Requirements">
+    </div>
+
+    <div class="summary-section">
+        <h2>Your Booking</h2>
+        <p><strong>Two Hour Walking Tour of Manhattan</strong></p>
+        <p>Location: New York, United States</p>
+        <p>Tour type: Daily Tour</p>
+        <p>Departure date: 11/12/2024</p>
+        <p>Duration: 10 hours</p>
+        <p>Number of Adult: 1</p>
+
+        <label>Coupon Code</label>
+        <input type="text" id="couponCode" placeholder="Enter coupon code">
+        <button type="button" class="apply-btn" onclick="applyCoupon()">Apply</button>
+
+        <p>Adult Price: $100.00</p>
+        <p>Subtotal: $100.00</p>
+        <p class="total">Pay Amount: <span id="payAmount">$100.00</span></p>
+    </div>
 </div>
+
+<div class="payment-method">
+    <h2>Select Payment Method</h2>
+    <select>
+        <option value="bank-transfer">Bank Transfer</option>
+    </select>
+    <div>
+        <p><strong>Bank account Information:</strong></p>
+        <p>Account Name: Nguyen Jack</p>
+        <p>Account Number: 0123458741254</p>
+        <p>Bank Name: HSBC Private International Bank</p>
+        <p>SWIFT Code: 12312</p>
+        <p>Please contact the admin for payment confirmation!</p>
+    </div>
+</div>
+
+<div class="terms">
+    <input type="checkbox" id="terms">
+    <label for="terms">I have read and accept the <a href="#">terms and conditions</a> and <a href="#">Privacy Policy</a></label>
+</div>
+
+<button onclick="validateForm()">Submit</button>
+
 </body>
 </html>
