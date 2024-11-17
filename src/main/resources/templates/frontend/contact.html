@@ -4,46 +4,51 @@
       layout:decorate="~{layouts/frontend/layout}">
 <head>
     <title>hello - world</title>
-<!--    <link rel="stylesheet" th:href="{}">-->
+    <link rel="stylesheet" th:href="@{/assets/css/contact.css}">
 </head>
 <body>
 <div layout:fragment="content">
-    <section class="contact">
-        <h2>Contact me!</h2><br>
-        <form action="#" id="contactForm">
-            <div class="input-box">
-                <div class="input-field field">
-                    <input type="text" placeholder="Full Name" id="name"
-                           class="item" autocomplete="off">
-                    <div class="error-txt">Full Name can't be blank</div>
+    <div class="container mx-auto justify-content-center d-flex my-5">
+        <section class="contact">
+            <h2>Contact me!</h2><br>
+            <form action="#" id="contactForm">
+                <div class="input-box">
+                    <div class="input-field field">
+                        <input type="text" placeholder="Full Name" id="name"
+                               class="item" autocomplete="off">
+                        <div class="error-txt">Full Name can't be blank</div>
+                    </div>
+                    <div class="input-field field">
+                        <input type="text" placeholder="Email Address"
+                               id="email" class="item" autocomplete="off">
+                        <div class="error-txt">Email can't be blank</div>
+                    </div>
                 </div>
-                <div class="input-field field">
-                    <input type="text" placeholder="Email Address"
-                           id="email" class="item" autocomplete="off">
-                    <div class="error-txt">Email can't be blank</div>
+                <div class="input-box">
+                    <div class="input-field field">
+                        <input type="text" placeholder="Phone Number" id="phone"
+                               class="item" autocomplete="off">
+                        <div class="error-txt">Phone Number can't be blank</div>
+                    </div>
+                    <div class="input-field field">
+                        <input type="text" placeholder="Subject"
+                               id="subject" class="item" autocomplete="off">
+                        <div class="error-txt">Subject can't be blank</div>
+                    </div>
                 </div>
-            </div>
-            <div class="input-box">
-                <div class="input-field field">
-                    <input type="text" placeholder="Phone Number" id="phone"
-                           class="item" autocomplete="off">
-                    <div class="error-txt">Phone Number can't be blank</div>
-                </div>
-                <div class="input-field field">
-                    <input type="text" placeholder="Subject"
-                           id="subject" class="item" autocomplete="off">
-                    <div class="error-txt">Subject can't be blank</div>
-                </div>
-            </div>
-            <div class="textarea-field field">
+                <div class="textarea-field field">
                 <textarea name="" id="message" cols="30" rows="10"
                           placeholder="Your Message" class="item" autocomplete="off"></textarea>
-                <div class="error-txt">Message can't be blank</div>
-            </div>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-    <script src="contact.js"></script>
+                    <div class="error-txt">Message can't be blank</div>
+                </div>
+                <button class="btn btn-primary">Send message</button>
+            </form>
+        </section>
+    </div>
+
+    <div layout:fragment="scripts">
+        <script th:src="@{/assets/js/contact.js}"></script>
+    </div>
 </div>
 </body>
 </html>

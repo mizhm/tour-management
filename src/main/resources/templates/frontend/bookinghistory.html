@@ -1,53 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/frontend/layout}">
 <head>
-    <meta charset="UTF-8">
     <title>Booking History</title>
-    <link rel="stylesheet" href="bookinghistory.css">
+    <link rel="stylesheet" th:href="@{/assets/css/bookinghistory.css}">
 </head>
 <body>
-<div class="container">
-    <div class="sidebar">
-        <div class="sidebar-header">
-            <img src="https://modtour.travelerwp.com/wp-content/uploads/2022/04/Color-2.svg" alt="Profile Picture" width="100px" height="50px">
-        </div>
-        <div class="sidebar-header">
-            <div>
-                <img alt="" src="https://secure.gravatar.com/avatar/275a8145e80f50cc4d57ec718f21642c?s=50&d=mm&r=g"
-                     srcset="https://secure.gravatar.com/avatar/275a8145e80f50cc4d57ec718f21642c?s=100&d=mm&r=g 2x" class="avatar"
-                     height="30" width="30" decording="async">
+<div layout:fragment="content">
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://modtour.travelerwp.com/wp-content/uploads/2022/04/Color-2.svg" alt="Profile Picture" width="100px" height="50px">
             </div>
-            <div class="user-info">
-                <span class="user-name">Nguyễn Văn A</span>
-                <span class="user-role">Since: Nov 2024</span>
+            <div class="sidebar-header">
+                <div>
+                    <img alt="" src="https://secure.gravatar.com/avatar/275a8145e80f50cc4d57ec718f21642c?s=50&d=mm&r=g"
+                         srcset="https://secure.gravatar.com/avatar/275a8145e80f50cc4d57ec718f21642c?s=100&d=mm&r=g 2x" class="avatar"
+                         height="30" width="30" decording="async">
+                </div>
+                <div class="user-info">
+                    <span class="user-name">Nguyễn Văn A</span>
+                    <span class="user-role">Since: Nov 2024</span>
+                </div>
             </div>
+            <div class="sidebar-menu">
+                <a href="#" class="nav-item"><img src="https://modtour.travelerwp.com/wp-content/themes/traveler/v2/images/dashboard/ico_booking_his.svg" alt class="st-icon-menu"> Settings</a>
+                <a href="#" class="nav-item active"><img src="https://modtour.travelerwp.com/wp-content/themes/traveler/v2/images/dashboard/ico_booking_his.svg"> Booking History</a>
+                <a href="#" class="nav-item"><img src="https://modtour.travelerwp.com/wp-content/themes/traveler/v2/images/dashboard/ico_wishlish.svg"> Wishlist</a>
+                <a href="#" class="nav-item"><img src="https://modtour.travelerwp.com/wp-content/themes/traveler/v2/images/dashboard/ico_inbox.svg"> Inbox Notification</a>
+            </div>
+            <a href="#" class="logout">Log Out</a>
+            <a href="#" class="back-home">Back to Homepage</a>
         </div>
-        <div class="sidebar-menu">
-            <a href="#" class="nav-item"><img src="https://modtour.travelerwp.com/wp-content/themes/traveler/v2/images/dashboard/ico_booking_his.svg" alt class="st-icon-menu"> Settings</a>
-            <a href="#" class="nav-item active"><img src="https://modtour.travelerwp.com/wp-content/themes/traveler/v2/images/dashboard/ico_booking_his.svg"> Booking History</a>
-            <a href="#" class="nav-item"><img src="https://modtour.travelerwp.com/wp-content/themes/traveler/v2/images/dashboard/ico_wishlish.svg"> Wishlist</a>
-            <a href="#" class="nav-item"><img src="https://modtour.travelerwp.com/wp-content/themes/traveler/v2/images/dashboard/ico_inbox.svg"> Inbox Notification</a>
-        </div>
-        <a href="#" class="logout">Log Out</a>
-        <a href="#" class="back-home">Back to Homepage</a>
+        <main class="content">
+            <h2>Booking History</h2>
+            <div class="tab-able">
+                <div class="tabs">
+                    <span class="tab active" onclick="showTab('all')">ALL</span>
+                    <span class="tab" onclick="showTab('pending')">PENDING</span>
+                    <span class="tab" onclick="showTab('completed')">COMPLETED</span>
+                    <span class="tab" onclick="showTab('incomplete')">INCOMPLETE</span>
+                    <span class="tab" onclick="showTab('cancelled')">CANCELLED</span>
+                    <span class="tab" onclick="showTab('cancelling')">CANCELLING</span>
+                </div>
+                <div id="booking-history-content">
+                    <p>No Booking History</p>
+                </div>
+            </div>
+        </main>
     </div>
-    <main class="content">
-        <h2>Booking History</h2>
-        <div class="tab-able">
-            <div class="tabs">
-                <span class="tab active" onclick="showTab('all')">ALL</span>
-                <span class="tab" onclick="showTab('pending')">PENDING</span>
-                <span class="tab" onclick="showTab('completed')">COMPLETED</span>
-                <span class="tab" onclick="showTab('incomplete')">INCOMPLETE</span>
-                <span class="tab" onclick="showTab('cancelled')">CANCELLED</span>
-                <span class="tab" onclick="showTab('cancelling')">CANCELLING</span>
-            </div>
-            <div id="booking-history-content">
-                <p>No Booking History</p>
-            </div>
-        </div>
-    </main>
 </div>
-<script src="bookinghistory.js"></script>
+<div layout:fragment="scripts">
+    <script th:src="@{/assets/js/bookinghistory.js}"></script>
+</div>
 </body>
 </html>

@@ -21,7 +21,8 @@ public class WebMvcConfig implements WebMvcConfigurer {
             "classpath:/META-INF/resources/",
             "classpath:/resources/",
             "classpath:/static/",
-            "classpath:/public/"
+            "classpath:/public/",
+            "classpath:/static/assets/"
     };
 
     @Override

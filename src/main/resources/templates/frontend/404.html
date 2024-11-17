@@ -3,13 +3,11 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layouts/frontend/layout}">
 <head>
-    <title>hello - world</title>
-<!--    <link rel="stylesheet" th:href="{}">-->
-    <link rel="stylesheet" href="../../static/assets/css/404.css">
+    <title>404 NOT FOUND</title>
+    <link rel="stylesheet" th:href="@{/assets/css/404.css}">
 </head>
 <body>
 <div layout:fragment="content">
-    <h1> 404 Page Not Found</h1>
     <div class="error">
         <div class="error-content">
             <img src="./image/404.img" alt="">

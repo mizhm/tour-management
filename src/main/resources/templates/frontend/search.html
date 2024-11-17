@@ -4,14 +4,12 @@
       layout:decorate="~{layouts/frontend/layout}">
 <head>
     <title>hello - world</title>
-<!--    <link rel="stylesheet" th:href="{}">-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../../static/assets/css/search.css">
+    <link rel="stylesheet" th:href="@{/assets/css/search.css}">
 </head>
 <body>
 <div layout:fragment="content">
-    <h1>search page</h1>
     <div class="search">
         <div class="search-container">
             <p class="search-container__heading">Your world of join</p>
@@ -75,12 +73,14 @@
         </div>
     </div>
 </div>
-<script src="../../static/assets/js/search.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script>
-    flatpickr("#dateTime", {
-        dateFormat: "d-m-Y",
-    });
-</script>
+<div layout:fragment="scripts">
+    <script th:src="@{/assets/js/search.js}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        flatpickr("#dateTime", {
+            dateFormat: "d-m-Y",
+        });
+    </script>
+</div>
 </body>
 </html>
